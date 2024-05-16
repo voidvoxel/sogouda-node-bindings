@@ -1,6 +1,6 @@
 {
   "name": "@sogouda/bindings",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A set of JavaScript/TypeScript bindings for Sogouda",
   "main": "index.node",
   "scripts": {
