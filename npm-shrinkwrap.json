@@ -1,0 +1,204 @@
+{
+  "name": "@sogouda/bindings",
+  "version": "0.0.0",
+  "lockfileVersion": 3,
+  "requires": true,
+  "packages": {
+    "": {
+      "name": "@sogouda/bindings",
+      "version": "0.0.0",
+      "license": "MPL-2.0",
+      "devDependencies": {
+        "@neon-rs/cli": "0.1.68",
+        "@toml-tools/parser": "^1.0.0"
+      }
+    },
+    "node_modules/@cargo-messages/android-arm-eabi": {
+      "version": "0.1.67",
+      "resolved": "https://registry.npmjs.org/@cargo-messages/android-arm-eabi/-/android-arm-eabi-0.1.67.tgz",
+      "integrity": "sha512-L2u1zuPIy7iTB4AQyzXHTPlHtCF9L1VKsyfTLr8TBL7kXXnW+juorxujuYTKKO2Gw2ndb+NjPY27ZFqpPjtaXA==",
+      "cpu": [
+        "arm"
+      ],
+      "dev": true,
+      "optional": true,
+      "os": [
+        "android"
+      ]
+    },
+    "node_modules/@cargo-messages/darwin-arm64": {
+      "version": "0.1.67",
+      "resolved": "https://registry.npmjs.org/@cargo-messages/darwin-arm64/-/darwin-arm64-0.1.67.tgz",
+      "integrity": "sha512-LjJiPbxn1TzvYnCH4Vrq0O8leLX1koVnmeLiJsdO5INBUrfJZeV/7tijLEtS6ZZhAR00B1nurJL6ycrUHY6F3g==",
+      "cpu": [
+        "arm64"
+      ],
+      "dev": true,
+      "optional": true,
+      "os": [
+        "darwin"
+      ]
+    },
+    "node_modules/@cargo-messages/darwin-x64": {
+      "version": "0.1.67",
+      "resolved": "https://registry.npmjs.org/@cargo-messages/darwin-x64/-/darwin-x64-0.1.67.tgz",
+      "integrity": "sha512-XHKSnBLO8heVUuWPzYmyZMTFTc5pp4YREHNaviFoukVl6DPw2nUz3eclwI7EesUXtdjYiHegKB+9RgkpvzWijw==",
+      "cpu": [
+        "x64"
+      ],
+      "dev": true,
+      "optional": true,
+      "os": [
+        "darwin"
+      ]
+    },
+    "node_modules/@cargo-messages/linux-arm-gnueabihf": {
+      "version": "0.1.67",
+      "resolved": "https://registry.npmjs.org/@cargo-messages/linux-arm-gnueabihf/-/linux-arm-gnueabihf-0.1.67.tgz",
+      "integrity": "sha512-CnrdvDEU9KfXh66UqYnJBw9h/JnstYHAZiTdf05HEPdv+T8HNVnFvalQ5nYWd2kezezvqpz7MVHNEnqtKdxEPQ==",
+      "cpu": [
+        "arm"
+      ],
+      "dev": true,
+      "optional": true,
+      "os": [
+        "linux"
+      ]
+    },
+    "node_modules/@cargo-messages/linux-x64-gnu": {
+      "version": "0.1.67",
+      "resolved": "https://registry.npmjs.org/@cargo-messages/linux-x64-gnu/-/linux-x64-gnu-0.1.67.tgz",
+      "integrity": "sha512-UzJ7rCx1Ch8gOrdXSnnPS1CmzYcPr6suIvPo/vx6+xGJQuCpNA38PpjhKul9vwH9cDXHwNUq5/3JbEIxBTjCyw==",
+      "cpu": [
+        "x64"
+      ],
+      "dev": true,
+      "optional": true,
+      "os": [
+        "linux"
+      ]
+    },
+    "node_modules/@cargo-messages/win32-arm64-msvc": {
+      "version": "0.1.67",
+      "resolved": "https://registry.npmjs.org/@cargo-messages/win32-arm64-msvc/-/win32-arm64-msvc-0.1.67.tgz",
+      "integrity": "sha512-Cbp9aBu1T3BhjSNUN/3v51Qr7bkSUNo5cwYMCZlkOdjepxNqTBhCEAzm2CHD9W0osdJrMF9/c8RX5yu0UkjxFQ==",
+      "cpu": [
+        "arm64"
+      ],
+      "dev": true,
+      "optional": true,
+      "os": [
+        "win32"
+      ]
+    },
+    "node_modules/@cargo-messages/win32-x64-msvc": {
+      "version": "0.1.67",
+      "resolved": "https://registry.npmjs.org/@cargo-messages/win32-x64-msvc/-/win32-x64-msvc-0.1.67.tgz",
+      "integrity": "sha512-ASs8v5cWzbyDU+OsMHRmkOMy0IW+ZRMWyLvbanTp68cDsInyPbQc0JMAcMY1GIMKhCZCUmg3ClJt5I+ytUxTUg==",
+      "cpu": [
+        "x64"
+      ],
+      "dev": true,
+      "optional": true,
+      "os": [
+        "win32"
+      ]
+    },
+    "node_modules/@chevrotain/cst-dts-gen": {
+      "version": "11.0.3",
+      "resolved": "https://registry.npmjs.org/@chevrotain/cst-dts-gen/-/cst-dts-gen-11.0.3.tgz",
+      "integrity": "sha512-BvIKpRLeS/8UbfxXxgC33xOumsacaeCKAjAeLyOn7Pcp95HiRbrpl14S+9vaZLolnbssPIUuiUd8IvgkRyt6NQ==",
+      "dev": true,
+      "dependencies": {
+        "@chevrotain/gast": "11.0.3",
+        "@chevrotain/types": "11.0.3",
+        "lodash-es": "4.17.21"
+      }
+    },
+    "node_modules/@chevrotain/gast": {
+      "version": "11.0.3",
+      "resolved": "https://registry.npmjs.org/@chevrotain/gast/-/gast-11.0.3.tgz",
+      "integrity": "sha512-+qNfcoNk70PyS/uxmj3li5NiECO+2YKZZQMbmjTqRI3Qchu8Hig/Q9vgkHpI3alNjr7M+a2St5pw5w5F6NL5/Q==",
+      "dev": true,
+      "dependencies": {
+        "@chevrotain/types": "11.0.3",
+        "lodash-es": "4.17.21"
+      }
+    },
+    "node_modules/@chevrotain/regexp-to-ast": {
+      "version": "11.0.3",
+      "resolved": "https://registry.npmjs.org/@chevrotain/regexp-to-ast/-/regexp-to-ast-11.0.3.tgz",
+      "integrity": "sha512-1fMHaBZxLFvWI067AVbGJav1eRY7N8DDvYCTwGBiE/ytKBgP8azTdgyrKyWZ9Mfh09eHWb5PgTSO8wi7U824RA==",
+      "dev": true
+    },
+    "node_modules/@chevrotain/types": {
+      "version": "11.0.3",
+      "resolved": "https://registry.npmjs.org/@chevrotain/types/-/types-11.0.3.tgz",
+      "integrity": "sha512-gsiM3G8b58kZC2HaWR50gu6Y1440cHiJ+i3JUvcp/35JchYejb2+5MVeJK0iKThYpAa/P2PYFV4hoi44HD+aHQ==",
+      "dev": true
+    },
+    "node_modules/@chevrotain/utils": {
+      "version": "11.0.3",
+      "resolved": "https://registry.npmjs.org/@chevrotain/utils/-/utils-11.0.3.tgz",
+      "integrity": "sha512-YslZMgtJUyuMbZ+aKvfF3x1f5liK4mWNxghFRv7jqRR9C3R3fAOGTTKvxXDa2Y1s9zSbcpuO0cAxDYsc9SrXoQ==",
+      "dev": true
+    },
+    "node_modules/@neon-rs/cli": {
+      "version": "0.1.68",
+      "resolved": "https://registry.npmjs.org/@neon-rs/cli/-/cli-0.1.68.tgz",
+      "integrity": "sha512-K3U/DUC7oxBKAGfU3P6tDW8K2ir39Peqaeyrgm+xRxJ2sRuYp/PzbJNuYnjOA/7GWGYt/xDOeEdh6QOV1PGRTg==",
+      "dev": true,
+      "bin": {
+        "neon": "index.js"
+      },
+      "optionalDependencies": {
+        "@cargo-messages/android-arm-eabi": "0.1.67",
+        "@cargo-messages/darwin-arm64": "0.1.67",
+        "@cargo-messages/darwin-x64": "0.1.67",
+        "@cargo-messages/linux-arm-gnueabihf": "0.1.67",
+        "@cargo-messages/linux-x64-gnu": "0.1.67",
+        "@cargo-messages/win32-arm64-msvc": "0.1.67",
+        "@cargo-messages/win32-x64-msvc": "0.1.67"
+      }
+    },
+    "node_modules/@toml-tools/lexer": {
+      "version": "1.0.0",
+      "resolved": "https://registry.npmjs.org/@toml-tools/lexer/-/lexer-1.0.0.tgz",
+      "integrity": "sha512-rVoOC9FibF2CICwCBWQnYcjAEOmLCJExer178K2AsY0Nk9FjJNVoVJuR5UAtuq42BZOajvH+ainf6Gj2GpCnXQ==",
+      "dev": true,
+      "dependencies": {
+        "chevrotain": "^11.0.1"
+      }
+    },
+    "node_modules/@toml-tools/parser": {
+      "version": "1.0.0",
+      "resolved": "https://registry.npmjs.org/@toml-tools/parser/-/parser-1.0.0.tgz",
+      "integrity": "sha512-j8cd3A3ccLHppGoWI69urbiVJslrpwI6sZ61ySDUPxM/FTkQWRx/JkkF8aipnl0Ds0feWXyjyvmWzn70mIohYg==",
+      "dev": true,
+      "dependencies": {
+        "@toml-tools/lexer": "^1.0.0",
+        "chevrotain": "^11.0.1"
+      }
+    },
+    "node_modules/chevrotain": {
+      "version": "11.0.3",
+      "resolved": "https://registry.npmjs.org/chevrotain/-/chevrotain-11.0.3.tgz",
+      "integrity": "sha512-ci2iJH6LeIkvP9eJW6gpueU8cnZhv85ELY8w8WiFtNjMHA5ad6pQLaJo9mEly/9qUyCpvqX8/POVUTf18/HFdw==",
+      "dev": true,
+      "dependencies": {
+        "@chevrotain/cst-dts-gen": "11.0.3",
+        "@chevrotain/gast": "11.0.3",
+        "@chevrotain/regexp-to-ast": "11.0.3",
+        "@chevrotain/types": "11.0.3",
+        "@chevrotain/utils": "11.0.3",
+        "lodash-es": "4.17.21"
+      }
+    },
+    "node_modules/lodash-es": {
+      "version": "4.17.21",
+      "resolved": "https://registry.npmjs.org/lodash-es/-/lodash-es-4.17.21.tgz",
+      "integrity": "sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==",
+      "dev": true
+    }
+  }
+}
