@@ -1,0 +1,37 @@
+{
+  "name": "@sogouda/bindings",
+  "version": "0.0.0",
+  "description": "A set of JavaScript/TypeScript bindings for Sogouda",
+  "main": "index.node",
+  "scripts": {
+    "test": "cargo test",
+    "cargo-build": "cargo build --message-format=json > cargo.log",
+    "cross-build": "cross build --message-format=json > cross.log",
+    "postcargo-build": "neon dist < cargo.log",
+    "postcross-build": "neon dist -m /target < cross.log",
+    "debug": "npm run cargo-build --",
+    "build": "npm run cargo-build -- --release",
+    "cross": "npm run cross-build -- --release"
+  },
+  "author": "Ashlynne Juniper",
+  "license": "MPL-2.0",
+  "devDependencies": {
+    "@neon-rs/cli": "0.1.68",
+    "@toml-tools/parser": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sogouda/node-bindings.git"
+  },
+  "keywords": [
+    "sogouda",
+    "bindings",
+    "node",
+    "deno",
+    "bun"
+  ],
+  "bugs": {
+    "url": "https://github.com/sogouda/node-bindings/issues"
+  },
+  "homepage": "https://github.com/sogouda/node-bindings#readme"
+}
