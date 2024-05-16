@@ -3,6 +3,7 @@
   "version": "0.1.2",
   "description": "A set of JavaScript/TypeScript bindings for Sogouda",
   "main": "index.node",
+  "types": "index.d.ts",
   "scripts": {
     "test": "cargo test",
     "cargo-build": "cargo build --message-format=json > cargo.log",
