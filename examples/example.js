@@ -1,8 +1,8 @@
+// Import the Sogouda bindings API.
 const bindings = require("..");
 
 
-console.log(bindings);
-
+// Define the app options.
 const options = {
     title: "Hello World",
     url: "https://example.com",
@@ -12,4 +12,5 @@ const options = {
     debug: false
 };
 
+// Start the Sogouda app.
 bindings.start(options);
