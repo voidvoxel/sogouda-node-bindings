@@ -1,12 +1,12 @@
-# @sogouda/bindings
+# `@sogouda/bindings`
 
-**@sogouda/bindings:** A set of JavaScript/TypeScript bindings for Sogouda
+**`@sogouda/bindings`:** A set of JavaScript/TypeScript bindings for Sogouda
 
-This project was bootstrapped by [create-neon](https://www.npmjs.com/package/create-neon).
+This project was bootstrapped by [`create-neon`](https://www.npmjs.com/package/create-neon).
 
-## Building @sogouda/bindings
+## Building `@sogouda/bindings`
 
-Building @sogouda/bindings requires a [supported version of Node and Rust](https://github.com/neon-bindings/neon#platform-support).
+Building `@sogouda/bindings` requires a [supported version of Node and Rust](https://github.com/neon-bindings/neon#platform-support).
 
 To run the build, run:
 
@@ -14,11 +14,11 @@ To run the build, run:
 $ npm run build
 ```
 
-This command uses the [@neon-rs/cli](https://www.npmjs.com/package/@neon-rs/cli) utility to assemble the binary Node addon from the output of `cargo`.
+This command uses the [`@neon-rs/cli`](https://www.npmjs.com/package/@neon-rs/cli) utility to assemble the binary Node addon from the output of `cargo`.
 
-## Exploring @sogouda/bindings
+## Exploring `@sogouda/bindings`
 
-After building @sogouda/bindings, you can explore its exports at the Node console:
+After building `@sogouda/bindings`, you can explore its exports at the Node console:
 
 ```sh
 $ npm i
