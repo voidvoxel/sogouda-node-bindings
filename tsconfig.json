@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "declaration": true,
+        "emitDeclarationOnly": true,
+        "outDir": ".",
+        "declarationMap": true,
+        "noImplicitAny": false
+    },
+    "include": [
+        "ts/**.ts"
+    ],
+    "exclude": [
+        "**/*.spec.ts"
+    ]
+}
