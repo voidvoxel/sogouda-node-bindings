@@ -16,8 +16,7 @@
   "author": "Ashlynne Juniper",
   "license": "MPL-2.0",
   "devDependencies": {
-    "@neon-rs/cli": "0.1.68",
-    "@toml-tools/parser": "^1.0.0"
+    "@neon-rs/cli": "0.1.68"
   },
   "repository": {
     "type": "git",
