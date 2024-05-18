@@ -1,6 +1,6 @@
 use neon::prelude::*;
 
-use sogouda::launch_app;
+use sogouda_core::launch_app;
 
 
 fn start(mut cx: FunctionContext) -> JsResult<JsObject> {
