@@ -24,8 +24,7 @@ After building `@sogouda/bindings`, you can explore its exports at the Node cons
 $ npm i
 $ npm run build
 $ node
-> require('.').hello()
-'hello node'
+> require('.').start()
 ```
 
 ## Available Scripts
