@@ -1,3 +1,4 @@
+# Neon build files
 target
 index.node
 **/node_modules
@@ -5,3 +6,6 @@ index.node
 npm-debug.log*cargo.log
 cargo.log
 cross.log
+
+# Distributable files
+dist/
