@@ -4,6 +4,16 @@
 
 This project was bootstrapped by [`create-neon`](https://www.npmjs.com/package/create-neon).
 
+## Dependencies
+
+### Linux
+
+#### Ubuntu
+
+```sh
+sudo apt install libglib2.0-dev libcairo2-dev libgdk-pixbuf2.0-dev libpangomm-1.4-dev libatk1.0-dev libsoup2.4-dev libgtk-3-dev libwebkit2gtk-4.0-dev
+```
+
 ## Building `@sogouda/bindings`
 
 Building `@sogouda/bindings` requires a [supported version of Node and Rust](https://github.com/neon-bindings/neon#platform-support).
