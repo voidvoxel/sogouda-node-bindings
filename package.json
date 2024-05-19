@@ -2,23 +2,29 @@
   "name": "@sogouda/bindings",
   "version": "0.1.5",
   "description": "A set of JavaScript/TypeScript bindings for Sogouda",
-  "main": "index.node",
-  "types": "index.d.ts",
+  "main": "dist/index.node",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "cargo test",
-    "cargo-build": "cargo build --message-format=json > cargo.log",
-    "cross-build": "cross build --message-format=json > cross.log",
-    "postcargo-build": "neon dist < cargo.log",
-    "postcross-build": "neon dist -m /target < cross.log",
-    "debug": "npm run cargo-build --",
-    "build": "npm run cargo-build -- --release && npm run build:types",
+    "build:cargo": "cargo build --message-format=json > cargo.log",
+    "build:cross": "cross build --message-format=json > cross.log",
+    "postbuild:cargo": "neon dist < cargo.log",
+    "postbuild:cross": "neon dist -m /target < cross.log",
+    "debug": "npm run build:cargo --",
+    "build": "npm run build:native && npm run build:types",
+    "build:dist": "shx rm -rf dist && shx mkdir -p dist && shx mv index.* dist/",
+    "build:native": "npm run build:cargo -- --release",
     "build:types": "tsc",
-    "cross": "npm run cross-build -- --release"
+    "clean": "shx rm -f index.d.ts index.d.ts.map index.node",
+    "cross": "npm run build:cross -- --release",
+    "prepublish": "npm run build",
+    "rebuild": "npm run clean && npm run build"
   },
   "author": "Ashlynne Juniper",
   "license": "MPL-2.0",
   "devDependencies": {
     "@neon-rs/cli": "0.1.68",
+    "shx": "^0.3.4",
     "typescript": "^5.4.5"
   },
   "repository": {
