@@ -14,7 +14,7 @@ function publishProject (
         path.join(
             __dirname,
             "..",
-            "projects",
+            "packages",
             projectName
         )
     );
@@ -55,4 +55,8 @@ if (args.length > 1) {
 }
 
 
-publishProject(projectName);
+try {
+    publishProject(projectName);
+} catch (error) {
+    console.error(error.message);
+}
