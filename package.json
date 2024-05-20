@@ -3,7 +3,7 @@
   "version": "0.1.6",
   "description": "A set of JavaScript/TypeScript bindings for the Sogouda App Framework",
   "main": "dist/index.js",
-  "types": "packages/app-bindings-types/index.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "cargo test",
     "build:cargo": "cargo build --message-format=json > cargo.log",
