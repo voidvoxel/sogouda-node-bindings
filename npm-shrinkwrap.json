@@ -8,9 +8,6 @@
       "name": "@sogouda/app-bindings",
       "version": "0.1.5",
       "license": "MPL-2.0",
-      "dependencies": {
-        "@sogouda/app-bindings-types": "^0.1.5"
-      },
       "devDependencies": {
         "@neon-rs/cli": "0.1.68",
         "@types/node": "^20.12.12",
@@ -153,15 +150,6 @@
       "os": [
         "linux"
       ],
-      "engines": {
-        "node": ">=20.13.1",
-        "sogouda": "^0.2.0"
-      }
-    },
-    "node_modules/@sogouda/app-bindings-types": {
-      "version": "0.1.5",
-      "resolved": "https://registry.npmjs.org/@sogouda/app-bindings-types/-/app-bindings-types-0.1.5.tgz",
-      "integrity": "sha512-NUidGZp1qAwAHqDCbj5/GQaOOBlOYHRAhPHBCVVvTnGg/5X3/qvFKQaaw5Ifi52i3XNROr7RSt1UJl+eKC78lg==",
       "engines": {
         "node": ">=20.13.1",
         "sogouda": "^0.2.0"

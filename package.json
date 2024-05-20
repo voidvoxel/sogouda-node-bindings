@@ -24,6 +24,7 @@
     "cleanall:lite": "npm run clean && shx rm -rf dist/ packages/",
     "cross": "npm run build:cross -- --release",
     "prepublish": "npm run cleanall && npm run build",
+    "prepublishOnly": "npm run publish:projects",
     "publish:projects": "npm run publish:projects:app-bindings-native && npm run publish:projects:app-bindings-types",
     "publish:projects:alpha": "npm run publish:projects:app-bindings-native:alpha && npm run publish:projects:app-bindings-types:alpha",
     "publish:projects:beta": "npm run publish:projects:app-bindings-native:beta && npm run publish:projects:app-bindings-types:beta",
@@ -79,8 +80,5 @@
   "bugs": {
     "url": "https://github.com/sogouda/node-bindings/issues"
   },
-  "homepage": "https://github.com/sogouda/node-bindings#readme",
-  "dependencies": {
-    "@sogouda/app-bindings-types": "^0.1.5"
-  }
+  "homepage": "https://github.com/sogouda/node-bindings#readme"
 }
