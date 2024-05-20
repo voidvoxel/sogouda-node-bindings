@@ -1,9 +1,9 @@
 {
-  "name": "@sogouda/bindings",
+  "name": "@sogouda/app-bindings",
   "version": "0.1.5",
-  "description": "A set of JavaScript/TypeScript bindings for Sogouda",
-  "main": "dist/index.node",
-  "types": "dist/index.d.ts",
+  "description": "A set of JavaScript/TypeScript bindings for the Sogouda App Framework",
+  "main": "dist/index.js",
+  "types": "packages/app-bindings-types/index.d.ts",
   "scripts": {
     "test": "cargo test",
     "build:cargo": "cargo build --message-format=json > cargo.log",
@@ -11,21 +11,59 @@
     "postbuild:cargo": "neon dist < cargo.log",
     "postbuild:cross": "neon dist -m /target < cross.log",
     "debug": "npm run build:cargo --",
-    "build": "npm run build:native && npm run build:types",
-    "build:dist": "shx rm -rf dist && shx mkdir -p dist && shx mv index.* dist/",
+    "build": "npm run build:native && npm run build:types && npm run build:api && npm run build:packages && npm run clean",
     "build:native": "npm run build:cargo -- --release",
-    "build:types": "tsc",
+    "build:packages": "shx mkdir -p packages && npm run build:packages:app-bindings-types && npm run build:packages:app-bindings-native",
+    "build:packages:app-bindings-native": "shx mkdir -p packages/app-bindings-native && node scripts/build/app-bindings-native.js && shx cp -r index.* packages/app-bindings-native && shx cp LICENSE packages/app-bindings-native/LICENSE && shx cp README.md packages/app-bindings-native/README.md",
+    "build:packages:app-bindings-types": "shx mkdir -p packages/app-bindings-types && node scripts/build/app-bindings-types.js && shx cp -r index.d.ts* packages/app-bindings-types && shx echo \"module.exports = {}\" > packages/app-bindings-types/index.js && shx cp -r projects/app-bindings-types/* packages/app-bindings-types/",
+    "build:api": "tsc -p src/api",
+    "build:types": "tsc -p src/types",
     "clean": "shx rm -f index.d.ts index.d.ts.map index.node",
+    "cleanall": "npm run cleanall:deep",
+    "cleanall:deep": "npm run cleanall:lite && shx rm -rf target/",
+    "cleanall:lite": "npm run clean && shx rm -rf dist/ packages/",
     "cross": "npm run build:cross -- --release",
-    "prepublish": "npm run build",
-    "rebuild": "npm run clean && npm run build"
+    "prepublish": "npm run cleanall && npm run build",
+    "publish:projects": "npm run publish:projects:app-bindings-native && npm run publish:projects:app-bindings-types",
+    "publish:projects:alpha": "npm run publish:projects:app-bindings-native:alpha && npm run publish:projects:app-bindings-types:alpha",
+    "publish:projects:beta": "npm run publish:projects:app-bindings-native:beta && npm run publish:projects:app-bindings-types:beta",
+    "publish:projects:rc": "npm run publish:projects:app-bindings-native:rc && npm run publish:projects:app-bindings-types:rc",
+    "publish:projects:app-bindings-native": "node scripts/publish.js app-bindings-native",
+    "publish:projects:app-bindings-types": "node scripts/publish.js app-bindings-types",
+    "publish:projects:app-bindings-native:alpha": "node scripts/publish.js app-bindings-native alpha",
+    "publish:projects:app-bindings-types:alpha": "node scripts/publish.js app-bindings-types alpha",
+    "publish:projects:app-bindings-native:beta": "node scripts/publish.js app-bindings-native beta",
+    "publish:projects:app-bindings-types:beta": "node scripts/publish.js app-bindings-types beta",
+    "publish:projects:app-bindings-native:rc": "node scripts/publish.js app-bindings-native rc",
+    "publish:projects:app-bindings-types:rc": "node scripts/publish.js app-bindings-types rc",
+    "publish:release": "npm run cleanall && npm run build && npm run publish:projects",
+    "publish:alpha": "npm run cleanall && npm run build && npm run publish:projects:alpha",
+    "publish:beta": "npm run cleanall && npm run build && npm run publish:projects:beta",
+    "publish:rc": "npm run cleanall && npm run build && npm run publish:projects:rc",
+    "rebuild": "npm run cleanall:lite && npm run build"
   },
   "author": "Ashlynne Juniper",
   "license": "MPL-2.0",
   "devDependencies": {
     "@neon-rs/cli": "0.1.68",
+    "@types/node": "^20.12.12",
+    "@voidvoxel/package-json": "^1.0.3",
     "shx": "^0.3.4",
     "typescript": "^5.4.5"
+  },
+  "optionalDependencies": {
+    "@sogouda/app-bindings-darwin-arm": "^0.1.0",
+    "@sogouda/app-bindings-darwin-arm64": "^0.1.0",
+    "@sogouda/app-bindings-darwin-ia32": "^0.1.0",
+    "@sogouda/app-bindings-darwin-x64": "^0.1.0",
+    "@sogouda/app-bindings-linux-arm": "^0.1.0",
+    "@sogouda/app-bindings-linux-arm64": "^0.1.0",
+    "@sogouda/app-bindings-linux-ia32": "^0.1.0",
+    "@sogouda/app-bindings-linux-x64": "^0.1.0",
+    "@sogouda/app-bindings-win32-arm": "^0.1.0",
+    "@sogouda/app-bindings-win32-arm64": "^0.1.0",
+    "@sogouda/app-bindings-win32-ia32": "^0.1.0",
+    "@sogouda/app-bindings-win32-x64": "^0.1.0"
   },
   "repository": {
     "type": "git",
@@ -41,5 +79,8 @@
   "bugs": {
     "url": "https://github.com/sogouda/node-bindings/issues"
   },
-  "homepage": "https://github.com/sogouda/node-bindings#readme"
+  "homepage": "https://github.com/sogouda/node-bindings#readme",
+  "dependencies": {
+    "@sogouda/app-bindings-types": "^0.1.5"
+  }
 }

@@ -1,17 +1,36 @@
 {
-  "name": "@sogouda/bindings",
+  "name": "@sogouda/app-bindings",
   "version": "0.1.5",
   "lockfileVersion": 3,
   "requires": true,
   "packages": {
     "": {
-      "name": "@sogouda/bindings",
+      "name": "@sogouda/app-bindings",
       "version": "0.1.5",
       "license": "MPL-2.0",
+      "dependencies": {
+        "@sogouda/app-bindings-types": "^0.1.5"
+      },
       "devDependencies": {
         "@neon-rs/cli": "0.1.68",
+        "@types/node": "^20.12.12",
+        "@voidvoxel/package-json": "^1.0.3",
         "shx": "^0.3.4",
         "typescript": "^5.4.5"
+      },
+      "optionalDependencies": {
+        "@sogouda/app-bindings-darwin-arm": "^0.1.0",
+        "@sogouda/app-bindings-darwin-arm64": "^0.1.0",
+        "@sogouda/app-bindings-darwin-ia32": "^0.1.0",
+        "@sogouda/app-bindings-darwin-x64": "^0.1.0",
+        "@sogouda/app-bindings-linux-arm": "^0.1.0",
+        "@sogouda/app-bindings-linux-arm64": "^0.1.0",
+        "@sogouda/app-bindings-linux-ia32": "^0.1.0",
+        "@sogouda/app-bindings-linux-x64": "^0.1.0",
+        "@sogouda/app-bindings-win32-arm": "^0.1.0",
+        "@sogouda/app-bindings-win32-arm64": "^0.1.0",
+        "@sogouda/app-bindings-win32-ia32": "^0.1.0",
+        "@sogouda/app-bindings-win32-x64": "^0.1.0"
       }
     },
     "node_modules/@cargo-messages/android-arm-eabi": {
@@ -122,6 +141,47 @@
         "@cargo-messages/win32-arm64-msvc": "0.1.67",
         "@cargo-messages/win32-x64-msvc": "0.1.67"
       }
+    },
+    "node_modules/@sogouda/app-bindings-linux-x64": {
+      "version": "0.1.5",
+      "resolved": "https://registry.npmjs.org/@sogouda/app-bindings-linux-x64/-/app-bindings-linux-x64-0.1.5.tgz",
+      "integrity": "sha512-9dhHPz+IijvNpfqxFjURXJnm/48RYPYSq4RJMFyO9hF85Nlj5Mgd8G1kU08o3SkiNbuSwN7Z+AotzWOtxhkuiw==",
+      "cpu": [
+        "x64"
+      ],
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "engines": {
+        "node": ">=20.13.1",
+        "sogouda": "^0.2.0"
+      }
+    },
+    "node_modules/@sogouda/app-bindings-types": {
+      "version": "0.1.5",
+      "resolved": "https://registry.npmjs.org/@sogouda/app-bindings-types/-/app-bindings-types-0.1.5.tgz",
+      "integrity": "sha512-NUidGZp1qAwAHqDCbj5/GQaOOBlOYHRAhPHBCVVvTnGg/5X3/qvFKQaaw5Ifi52i3XNROr7RSt1UJl+eKC78lg==",
+      "engines": {
+        "node": ">=20.13.1",
+        "sogouda": "^0.2.0"
+      }
+    },
+    "node_modules/@types/node": {
+      "version": "20.12.12",
+      "resolved": "https://registry.npmjs.org/@types/node/-/node-20.12.12.tgz",
+      "integrity": "sha512-eWLDGF/FOSPtAvEqeRAQ4C8LSA7M1I7i0ky1I8U7kD1J5ITyW3AsRhQrKVoWf5pFKZ2kILsEGJhsI9r93PYnOw==",
+      "dev": true,
+      "dependencies": {
+        "undici-types": "~5.26.4"
+      }
+    },
+    "node_modules/@voidvoxel/package-json": {
+      "version": "1.0.3",
+      "resolved": "https://registry.npmjs.org/@voidvoxel/package-json/-/package-json-1.0.3.tgz",
+      "integrity": "sha512-0asKXX1KB7hR1HNJJC545iUIUG5aN6jwvVkdWIxqEmhHjzUD7+phIkZ6cAMrG/digCL5EhPe06QPfyc03eTouw==",
+      "dev": true,
+      "hasShrinkwrap": true
     },
     "node_modules/balanced-match": {
       "version": "1.0.2",
@@ -360,6 +420,12 @@
       "engines": {
         "node": ">=14.17"
       }
+    },
+    "node_modules/undici-types": {
+      "version": "5.26.5",
+      "resolved": "https://registry.npmjs.org/undici-types/-/undici-types-5.26.5.tgz",
+      "integrity": "sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==",
+      "dev": true
     },
     "node_modules/wrappy": {
       "version": "1.0.2",

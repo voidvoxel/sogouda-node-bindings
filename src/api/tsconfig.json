@@ -2,13 +2,11 @@
     "compilerOptions": {
         "allowJs": true,
         "declaration": true,
-        "emitDeclarationOnly": true,
-        "outDir": ".",
-        "declarationMap": true,
+        "outDir": "../../dist",
         "noImplicitAny": false
     },
     "include": [
-        "src/types/**.ts"
+        "**.ts"
     ],
     "exclude": [
         "**/*.spec.ts"

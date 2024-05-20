@@ -3,6 +3,14 @@
 version = 3
 
 [[package]]
+name = "app-bindings"
+version = "0.1.5"
+dependencies = [
+ "neon",
+ "sogouda_core",
+]
+
+[[package]]
 name = "atk-sys"
 version = "0.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -12,14 +20,6 @@ dependencies = [
  "gobject-sys",
  "libc",
  "system-deps",
-]
-
-[[package]]
-name = "bindings"
-version = "0.1.0"
-dependencies = [
- "neon",
- "sogouda_core",
 ]
 
 [[package]]

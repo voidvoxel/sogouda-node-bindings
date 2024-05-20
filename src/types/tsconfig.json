@@ -3,12 +3,12 @@
         "allowJs": true,
         "declaration": true,
         "emitDeclarationOnly": true,
-        "outDir": ".",
+        "outDir": "../..",
         "declarationMap": true,
         "noImplicitAny": false
     },
     "include": [
-        "src/types/**.ts"
+        "**.ts"
     ],
     "exclude": [
         "**/*.spec.ts"
