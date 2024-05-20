@@ -8,4 +8,5 @@ cargo.log
 cross.log
 
 # Distributable files
+dist/
 packages/
