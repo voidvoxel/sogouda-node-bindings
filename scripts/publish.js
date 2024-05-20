@@ -57,6 +57,4 @@ if (args.length > 1) {
 
 try {
     publishProject(projectName);
-} catch (error) {
-    console.error(error.message);
-}
+} catch {}
