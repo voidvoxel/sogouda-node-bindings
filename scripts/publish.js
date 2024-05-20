@@ -19,6 +19,15 @@ function publishProject (
         )
     );
 
+    // Prepare the package for distribution.
+    execSync(
+        "npm pkg fix",
+        {
+            cwd: packageDirectory
+        }
+    );
+
+    // Publish the package.
     let command = "npm publish --access public";
 
     if (tag) {
@@ -33,7 +42,6 @@ function publishProject (
         command += " --tag " + tag;
     }
 
-    // Publish the package.
     execSync(
         command,
         {
