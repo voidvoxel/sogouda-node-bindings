@@ -29,6 +29,9 @@ async function main () {
         "dts"
     );
 
+    // Required to stop publish errors.
+    subPackage.scripts = [];
+
     await PackageJSON.writeFile("packages/app-bindings-types", subPackage);
 }
 

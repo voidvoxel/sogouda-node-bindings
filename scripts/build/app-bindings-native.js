@@ -29,6 +29,9 @@ async function main () {
         `${process.platform}-${process.arch}`
     );
 
+    // Required to stop publish errors.
+    subPackage.scripts = [];
+
     await PackageJSON.writeFile("packages/app-bindings-native", subPackage);
 }
 
