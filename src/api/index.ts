@@ -1,4 +1,5 @@
-/* Platform-dependent bindings */
+import { StartOptions } from "../types/index";
+
 
 // @ts-ignore -- optional interface, will gracefully degrade to `any` if not installed
 
@@ -35,8 +36,10 @@ export async function load (): Promise<any> {
 }
 
 
-export function start (...args: any[]): any {
-    return bindings.start(...args);
+export function start (options: StartOptions): any {
+    if (!bindings) throw notYetLoadedError();
+
+    return bindings.start(options);
 }
 
 

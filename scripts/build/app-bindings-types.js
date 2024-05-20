@@ -30,7 +30,7 @@ async function main () {
     );
 
     // Required to stop publish errors.
-    subPackage.scripts = [];
+    subPackage.scripts = {};
 
     await PackageJSON.writeFile("packages/app-bindings-types", subPackage);
 }
